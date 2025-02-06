@@ -1,8 +1,9 @@
 export const defaultTheme = {
-  'green': '#43D027',
   'blue': '#007CEE',
+  'green': '#43D027',
   'yellow': '#EEB600',
   'purple': '#7F00EE',
 
-  'background': '#0F0F0F'
+  'border': '#353535',
+  'background': '#0F0F0F',
 }
