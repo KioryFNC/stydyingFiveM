@@ -3,4 +3,6 @@ export const defaultTheme = {
   'blue': '#007CEE',
   'yellow': '#EEB600',
   'purple': '#7F00EE',
+
+  'background': '#0F0F0F'
 }
