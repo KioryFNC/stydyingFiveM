@@ -68,24 +68,42 @@ export const Routes = styled.ul`
   gap: .6rem;
 
   > li {
-    display: flex;
     width: 100%;
-    height: 4rem;
-    align-items: center;
-    padding: 0 1rem;
-    font-size: 1.6rem;
-    gap: 1.2rem;
-    color: #FFF;
-    border-radius: 6px;
-    background: radial-gradient(138.56% 100% at 0% 51.25%, #6523C2 0%, #8237EC 59.77%, #6523C2 100%);
-    box-shadow: -2px 4px 8px 0 rgba(0, 0, 0, 0.62);
 
-    > img {
-      width: 1.8rem;
-      height: 1.8rem;
+    > a {
+      display: flex;
+      width: 100%;
+      height: 4rem;
+      align-items: center;
+      padding: 0 1rem;
+      font-size: 1.6rem;
+      gap: 1.2rem;
+      color: rgba(255, 255, 255, 0.6);
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+
+      > img {
+        width: 1.8rem;
+        height: 1.8rem;
+        filter: brightness(0.7);
+        transition: all .3s ease-in-out;
+      }
+
+      &.active {
+        background: radial-gradient(138.56% 100% at 0% 51.25%, #6523C2 0%, #8237EC 59.77%, #6523C2 100%);
+        box-shadow: -2px 4px 8px 0 rgba(0, 0, 0, 0.62);
+        color: white; 
+        font-weight: bold;
+
+        > img {
+          filter: brightness(1.2);
+        }
+      }
     }
   }
-`
+`;
+
 
 export const Header = styled.header`
   grid-area: header;

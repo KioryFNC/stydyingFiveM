@@ -1,9 +1,9 @@
 import * as Element from "./styles"
 
-export function Dashboard() {
+export function Financial() {
   return (
     <Element.Root>
-      <h1>Dashboard</h1>
+      <h1>Financial</h1>
     </Element.Root>
   )
 }

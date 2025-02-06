@@ -23,32 +23,46 @@ export function DefaultLayout() {
 
         <Element.Routes>
           <li>
-            <img src={dashboard} alt="" />
-            <NavLink to="/" >Dashboard</NavLink>
+            <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+              <img src={dashboard} alt="" />
+              Dashboard
+            </NavLink>
           </li>
           <li>
-            <img src={bank} alt="" />
-            <NavLink to="/" >Financeiro</NavLink>
+            <NavLink to="/financeiro" className={({ isActive }) => (isActive ? "active" : "")}>
+              <img src={bank} alt="" />
+              Financeiro
+            </NavLink>
           </li>
           <li>
-            <img src={trophy} alt="" />
-            <NavLink to="/" >Ranking</NavLink>
+            <NavLink to="/financeiro" className={({ isActive }) => (isActive ? "active" : "")}>
+              <img src={trophy} alt="" />
+              Ranking
+            </NavLink>
           </li>
           <li>
-            <img src={workbook} alt="" />
-            <NavLink to="/" >Farm</NavLink>
+            <NavLink to="/financeiro" className={({ isActive }) => (isActive ? "active" : "")}>
+              <img src={workbook} alt="" />
+              Farm
+            </NavLink>
           </li>
           <li>
-            <img src={mission} alt="" />
-            <NavLink to="/" >Missões</NavLink>
+            <NavLink to="/financeiro" className={({ isActive }) => (isActive ? "active" : "")}>
+              <img src={mission} alt="" />
+              Missões
+            </NavLink>
           </li>
           <li>
-            <img src={docs} alt="" />
-            <NavLink to="/" >Logs</NavLink>
+            <NavLink to="/financeiro" className={({ isActive }) => (isActive ? "active" : "")}>
+              <img src={docs} alt="" />
+              Logs
+            </NavLink>
           </li>
           <li>
-            <img src={store} alt="" />
-            <NavLink to="/" >Loja</NavLink>
+            <NavLink to="/financeiro" className={({ isActive }) => (isActive ? "active" : "")}>
+              <img src={store} alt="" />
+              Loja
+            </NavLink>
           </li>
         </Element.Routes>
       </Element.Navigation>
