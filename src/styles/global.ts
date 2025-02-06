@@ -31,6 +31,8 @@ export const GlobalStyle = createGlobalStyle`
 
   li {
     list-style: none;
+    font-family: 'Purista TRIAL', sans-serif;
+    font-weight: 600;
   }
 
   a {

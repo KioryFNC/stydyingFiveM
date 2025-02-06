@@ -73,8 +73,10 @@ export const Routes = styled.ul`
     height: 4rem;
     align-items: center;
     padding: 0 1rem;
+    font-size: 1.6rem;
     gap: 1.2rem;
     color: #FFF;
+    border-radius: 6px;
     background: radial-gradient(138.56% 100% at 0% 51.25%, #6523C2 0%, #8237EC 59.77%, #6523C2 100%);
     box-shadow: -2px 4px 8px 0 rgba(0, 0, 0, 0.62);
 
