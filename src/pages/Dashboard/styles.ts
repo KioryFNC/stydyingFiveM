@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
 export const Root = styled.div`
-  background: red;
+  width: 100%;
+  height: 100%;
+`
+
+export const Container = styled.div`
+  display: flex;
+  gap: 1rem;
 `
