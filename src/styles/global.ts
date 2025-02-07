@@ -11,6 +11,16 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+  
+  @font-face {
+    font-family: PuristaBold;
+    src: url('/fonts/PuristaTRIAL-Bold.woff');
+  }
+
+  @font-face {
+    font-family: PuristaSemiBold;
+    src: url('/fonts/PuristaTRIAL-SemiBold.woff');
+  }
 
   body {
     width: 100%;

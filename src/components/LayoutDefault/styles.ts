@@ -74,6 +74,7 @@ export const Routes = styled.ul`
       display: flex;
       width: 100%;
       height: 4rem;
+      font-family: 'PuristaBold';
       align-items: center;
       padding: 0 1rem;
       font-size: 1.6rem;
@@ -82,6 +83,7 @@ export const Routes = styled.ul`
       border-radius: 6px;
       text-decoration: none;
       transition: all 0.3s ease-in-out;
+
 
       > img {
         width: 1.8rem;
@@ -109,11 +111,43 @@ export const Header = styled.header`
   grid-area: header;
   width: 100%;
   height: 5rem;
-  background: orange;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid ${(props) => props.theme['border']};
+  background: radial-gradient(79.03% 79.03% at 50% 20.97%, rgba(255, 255, 255, 0.07) 0%, rgba(153, 153, 153, 0.02) 100%);
+
+  > h1 {
+    font-family: 'PuristaBold', sans-serif;
+    color: #FFF;
+    font-size: 1.8rem;
+    text-shadow: 0 4px 4px rgba(255, 255, 255, 0.25);
+  }
+
+  > button {
+    font-family: 'PuristaSemiBold';
+    width: 9.4rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    gap: .6rem;
+    border-radius: 4px;
+    border: none;
+    background: linear-gradient(90deg, #D44 0%, #772525 100%);
+    color: #FFF;
+
+    > img {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
 `
 export const Content = styled.main`
   grid-area: content;
   width: 100%;
   height: 100%;
-  background: green;
 `

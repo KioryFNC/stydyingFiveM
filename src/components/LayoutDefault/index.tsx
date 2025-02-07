@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 import * as Element from "./styles"
+
 import person from "../../assets/person.png"
 import dashboard from "../../assets/routesIcon/dashboard.png"
 import bank from "../../assets/routesIcon/bank.png"
@@ -8,6 +9,8 @@ import workbook from "../../assets/routesIcon/workbook.svg"
 import mission from "../../assets/routesIcon/mission.svg"
 import docs from "../../assets/routesIcon/docs.svg"
 import store from "../../assets/routesIcon/store.svg"
+
+import exit from "../../assets/exit.svg"
 
 export function DefaultLayout() {
   return (
@@ -68,7 +71,12 @@ export function DefaultLayout() {
       </Element.Navigation>
 
       <Element.Header>
+        <h1> LIDER - LOS VAGOS</h1>
 
+        <button>
+          <img src={exit} alt="" />
+          SAIR
+        </button>
       </Element.Header>
 
       <Element.Content>
