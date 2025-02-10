@@ -17,15 +17,15 @@ export function Dashboard() {
       </Element.Status>
       <Element.Content>
         <Element.Members>
-          <h1>members</h1>
+          
         </Element.Members>
 
-        <Element.Actions>
+        <Element.Activity>
           <Actions image={walkieTalkie} btn="ENTRAR" label="RÁDIO"/>
           <Actions image={uniform} btn="VESTIR" label="UNIFORME"/>
           <Actions image={map} btn="MARCAR" label="LOCALIZAÇÃO"/>
           <Actions image={discord} btn="ENTRAR" label="DISCORD"/>
-        </Element.Actions>
+        </Element.Activity>
       </Element.Content>
     </Element.Root>
   )

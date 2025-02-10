@@ -1,4 +1,16 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const fadeToTheSide = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`
+
 
 export const Card = styled.div`
   position: relative;
@@ -14,6 +26,23 @@ export const Card = styled.div`
     rgba(255, 255, 255, 0.07) 0%, 
     rgba(153, 153, 153, 0.02) 100%
   );
+
+  opacity: 0;
+  transform: translateX(20px);
+  animation: ${fadeToTheSide} 0.8s ease-in-out forwards;
+
+  &:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  &:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  &:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  &:nth-child(4) {
+    animation-delay: 0.8s;
+  }
 `
 
 export const Dot = styled.div<{ color: string }>`

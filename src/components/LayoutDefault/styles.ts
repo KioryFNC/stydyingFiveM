@@ -1,4 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const fadeInUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`
 
 export const Root = styled.div`
   width: 120rem;
@@ -35,6 +45,7 @@ export const Profile = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
+  
 
   > img {
     width: 13rem;
@@ -66,9 +77,34 @@ export const Routes = styled.ul`
   flex-direction: column;
   align-items: flex-start;
   gap: .6rem;
+  
+  > li:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  > li:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  > li:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  > li:nth-child(4) {
+    animation-delay: 0.5s;
+  }
+  > li:nth-child(5) {
+    animation-delay: 0.6s;
+  }
+  > li:nth-child(6) {
+    animation-delay: 0.7s;
+  }
+  > li:nth-child(7) {
+    animation-delay: 0.8s;
+  }
 
   > li {
     width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: ${fadeInUp} 0.8s ease-in-out forwards;
 
     > a {
       display: flex;
@@ -83,7 +119,6 @@ export const Routes = styled.ul`
       border-radius: 6px;
       text-decoration: none;
       transition: all 0.3s ease-in-out;
-
 
       > img {
         width: 1.8rem;
@@ -147,7 +182,7 @@ export const Header = styled.header`
   }
 `
 export const Content = styled.main`
-   grid-area: content;
+  grid-area: content;
   width: 100%;
   height: 100%;
   max-height: 100vh;

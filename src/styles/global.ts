@@ -50,4 +50,17 @@ export const GlobalStyle = createGlobalStyle`
     color: inherit;
   }
 
+  button {
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
 `

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const Root = styled.div`
   width: 100%;
   max-height: 100%;
@@ -31,9 +32,10 @@ export const Members = styled.div`
   background: radial-gradient(79.03% 79.03% at 50% 20.97%, rgba(255, 255, 255, 0.07) 0%, rgba(153, 153, 153, 0.02) 100%);
   `
 
-export const Actions = styled.div`
+export const Activity = styled.div`
    flex: 1; 
    display: flex;
    flex-direction: column;
    gap: 1rem;
+   
 `
