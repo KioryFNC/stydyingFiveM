@@ -1,9 +1,9 @@
 import * as Element from './styles'
 
 interface OverviewCardProps {
+  color: string,
   value: string | number,
   label: string,
-  color: string
 }
 
 export function OverviewCard({ value, label, color }: OverviewCardProps) {

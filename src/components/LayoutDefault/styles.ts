@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Root = styled.div`
   width: 120rem;
-  height: 70rem;
+  height: 70vh;
   grid-template-columns: 21.2rem 1fr;
   grid-template-rows: 5rem 1fr;
   display: grid;
@@ -147,7 +147,10 @@ export const Header = styled.header`
   }
 `
 export const Content = styled.main`
-  grid-area: content;
+   grid-area: content;
   width: 100%;
   height: 100%;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
 `
