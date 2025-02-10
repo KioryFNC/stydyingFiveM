@@ -1,5 +1,10 @@
 import { OverviewCard } from "../../components/Overview"
 import * as Element from "./styles"
+import {Actions} from "../../components/Actions"
+import walkieTalkie from "../../assets/walkieTalkie.png"
+import uniform from "../../assets/uniform.png"
+import map from "../../assets/map.png"
+import discord from "../../assets/discord.png"
 
 export function Dashboard() {
   return (
@@ -16,7 +21,10 @@ export function Dashboard() {
         </Element.Members>
 
         <Element.Actions>
-          
+          <Actions image={walkieTalkie} btn="ENTRAR" label="RÁDIO"/>
+          <Actions image={uniform} btn="VESTIR" label="UNIFORME"/>
+          <Actions image={map} btn="MARCAR" label="LOCALIZAÇÃO"/>
+          <Actions image={discord} btn="ENTRAR" label="DISCORD"/>
         </Element.Actions>
       </Element.Content>
     </Element.Root>

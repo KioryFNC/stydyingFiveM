@@ -8,7 +8,7 @@ export const Card = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 6px;
-  border: 1px solid;
+  border: 1px solid ${(props) => props.theme['border']};
   background: radial-gradient(
     79.03% 79.03% at 50% 20.97%, 
     rgba(255, 255, 255, 0.07) 0%, 
@@ -46,7 +46,7 @@ export const Value = styled.div`
 `
 
 export const Label = styled.span`
-  font-size: 'PuristaSemiBold';
+  font-size: 'PuristaSemiBold', sans-serif;
   font-size: 1.8rem;
   color: rgba(255, 255, 255, 0.50);
 `
