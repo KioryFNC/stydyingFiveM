@@ -16,8 +16,8 @@ export const Action = styled.div`
     left: 1rem; 
     top: 50%;
     transform: translateY(-50%); 
-    width: 10rem;
-    height: 10rem;
+    width: 11rem;
+    height: 11rem;
     object-fit: contain;
   }
 
