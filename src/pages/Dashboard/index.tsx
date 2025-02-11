@@ -44,28 +44,84 @@ export function Dashboard() {
               </thead>
               <tbody>
                 <tr>
-                  <td>Yuri Barros [5592]</td>
+                  <td>Yuri Barros <span>[5592]</span></td>
                   <td>Líder</td>
                   <td>Online</td>
                   <td>140/400</td>
                   <td><UpArrow /> <DownArrow /> <X /></td>
                 </tr>
                 <tr>
-                  <td>Diego Araujo [2424]</td>
+                  <td>Diego Araujo <span>[2424]</span></td>
                   <td>Sub-líder</td>
                   <td>Online</td>
                   <td>140/400</td>
                   <td><UpArrow /> <DownArrow /> <X /></td>
                 </tr>
                 <tr>
-                  <td>Luan Barros [1010]</td>
+                  <td>Luan Barros <span>[1010]</span></td>
                   <td>Gerente</td>
                   <td>Online</td>
                   <td>140/400</td>
                   <td><UpArrow /> <DownArrow /> <X /></td>
                 </tr>
                 <tr>
-                  <td>Thiago Barros [1818]</td>
+                  <td>Thiago Barros <span>[1818]</span></td>
+                  <td>Membro</td>
+                  <td>Online</td>
+                  <td>140/400</td>
+                  <td><UpArrow /> <DownArrow /> <X /></td>
+                </tr>
+                <tr>
+                  <td>Yuri Barros <span>[5592]</span></td>
+                  <td>Líder</td>
+                  <td>Online</td>
+                  <td>140/400</td>
+                  <td><UpArrow /> <DownArrow /> <X /></td>
+                </tr>
+                <tr>
+                  <td>Diego Araujo <span>[2424]</span></td>
+                  <td>Sub-líder</td>
+                  <td>Online</td>
+                  <td>140/400</td>
+                  <td><UpArrow /> <DownArrow /> <X /></td>
+                </tr>
+                <tr>
+                  <td>Luan Barros <span>[1010]</span></td>
+                  <td>Gerente</td>
+                  <td>Online</td>
+                  <td>140/400</td>
+                  <td><UpArrow /> <DownArrow /> <X /></td>
+                </tr>
+                <tr>
+                  <td>Thiago Barros <span>[1818]</span></td>
+                  <td>Membro</td>
+                  <td>Online</td>
+                  <td>140/400</td>
+                  <td><UpArrow /> <DownArrow /> <X /></td>
+                </tr>
+                <tr>
+                  <td>Yuri Barros <span>[5592]</span></td>
+                  <td>Líder</td>
+                  <td>Online</td>
+                  <td>140/400</td>
+                  <td><UpArrow /> <DownArrow /> <X /></td>
+                </tr>
+                <tr>
+                  <td>Diego Araujo <span>[2424]</span></td>
+                  <td>Sub-líder</td>
+                  <td>Online</td>
+                  <td>140/400</td>
+                  <td><UpArrow /> <DownArrow /> <X /></td>
+                </tr>
+                <tr>
+                  <td>Luan Barros <span>[1010]</span></td>
+                  <td>Gerente</td>
+                  <td>Online</td>
+                  <td>140/400</td>
+                  <td><UpArrow /> <DownArrow /> <X /></td>
+                </tr>
+                <tr>
+                  <td>Thiago Barros <span>[1818]</span></td>
                   <td>Membro</td>
                   <td>Online</td>
                   <td>140/400</td>

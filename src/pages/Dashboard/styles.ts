@@ -28,6 +28,7 @@ export const Members = styled.div`
   align-items: center;
   gap: 0.6rem;
   border-radius: 6px;
+  overflow: auto;
   border: 1px solid ${( props ) => props.theme['border']};
   background: radial-gradient(79.03% 79.03% at 50% 20.97%, rgba(255, 255, 255, 0.07) 0%, rgba(153, 153, 153, 0.02) 100%);
 `
@@ -96,26 +97,26 @@ export const Table = styled.div`
   height: 100%;
 
   > table {
-    width: 100%;
-    border-collapse: collapse;
+      width: 100%;
+      border-collapse: separate; 
+      border-spacing: 0 .8rem; 
     
-      > thead {
+    > thead {
         width: 100%;
-        
       }
-
-      > thead tr {
+    
+    > thead tr {
         width: 100%;
         height: 3rem;
       }
-      
-      
-      > thead tr th {
+    
+    > thead tr th {
         color: rgba(255, 255, 255, 0.60);
         font-size: 1.4rem;
         text-align: center;
         font-weight: 400;
-      
+        padding: .6rem .8rem;
+        
         &:first-child {
           text-align: left;
         }
@@ -124,6 +125,65 @@ export const Table = styled.div`
           text-align: right;
         }
       }
+    
+    > tbody {
+        width: 100%;
+      }
+      
+    > tbody tr {
+        width: 100%;
+        height: 3.8rem;
+        background: linear-gradient(90deg, #1C1C1C 0%, #242424 100%);
+        box-shadow: 0px 4px 4px 0px rgba(7, 7, 7, 0.25);
+        color: white;
+        font-size: 1.2rem;
+        text-align: center;
+        span {
+          color: rgba(255, 255, 255, 0.40);
+        }
+      }
+    > tbody tr td {
+        border-radius: 6px;
+        padding: .6rem .8rem;
+
+        &:first-child {
+          text-align: left;
+        }
+        &:last-child {
+          text-align: right;
+          display: flex;
+          margin-top: .5rem;
+          justify-content: flex-end;
+          gap: 0.5rem;
+        }
+      }
+
+    > tbody tr td svg {
+        width: 2rem; 
+        height: 2rem;
+        padding: 0.3rem;
+        border-radius: 4px;
+
+        &:hover {
+          
+        }
+      }
+    
+      > tbody tr td svg:first-child { /* UpArrow */
+          border: 1px solid #43D027;
+          background: radial-gradient(50% 50% at 50% 50%, rgba(67, 208, 39, 0.50) 0%, rgba(44, 188, 16, 0.50) 100%);
+    }
+
+    > tbody tr td svg:nth-child(2) { /* DownArrow */
+        border: 1px solid #EEB600;
+        background: radial-gradient(50% 50% at 50% 50%, #EEB600 0%, #886800 100%);
+    }
+
+    > tbody tr td svg:last-child { /* X */
+        border: 1px solid #D44;
+        background: radial-gradient(50% 50% at 50% 50%, #D44 0%, #772525 100%);
+    }
+      
   }
 `
 

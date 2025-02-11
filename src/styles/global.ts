@@ -10,7 +10,21 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #282828;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: radial-gradient(50% 50% at 50% 50%, #8237EC 0%, #6B25CE 100%);
+      border-radius: 10px; 
+    }
   }
+  
   
   @font-face {
     font-family: PuristaBold;
@@ -50,7 +64,7 @@ export const GlobalStyle = createGlobalStyle`
     color: inherit;
   }
 
-  button {
+  svg, button {
     transition: transform 0.2s ease-in-out;
     cursor: pointer;
     
