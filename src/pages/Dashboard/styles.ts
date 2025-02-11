@@ -52,11 +52,20 @@ export const Header = styled.div`
   > div > input {
     min-width: 43.9rem;
     height: 3.8rem;
-    padding: 1.1rem auto .9rem 1.2rem;
+    padding: 1.1rem 1.2rem .9rem 3rem;
+    display: flex;
     align-items: flex-start;
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.06);
     background: linear-gradient(90deg, #1C1C1C 0%, #242424 100%);
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.35);
+      left: 3rem;
+    }
   }
   
 
@@ -83,7 +92,39 @@ export const Header = styled.div`
 `
 
 export const Table = styled.div`
+  width: 100%;
+  height: 100%;
 
+  > table {
+    width: 100%;
+    border-collapse: collapse;
+    
+      > thead {
+        width: 100%;
+        
+      }
+
+      > thead tr {
+        width: 100%;
+        height: 3rem;
+      }
+      
+      
+      > thead tr th {
+        color: rgba(255, 255, 255, 0.60);
+        font-size: 1.4rem;
+        text-align: center;
+        font-weight: 400;
+      
+        &:first-child {
+          text-align: left;
+        }
+        
+        &:last-child {
+          text-align: right;
+        }
+      }
+  }
 `
 
 export const Activity = styled.div`

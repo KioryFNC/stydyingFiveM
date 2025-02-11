@@ -10,6 +10,7 @@ import { Search } from "../../assets/search"
 import { UpArrow } from "../../assets/UpArrow"
 import { DownArrow } from "../../assets/DownArrow"
 import { X } from "../../assets/X"
+import { Filter } from "../../assets/Filter"
 
 export function Dashboard() {
   return (
@@ -34,10 +35,10 @@ export function Dashboard() {
             <table>
               <thead>
                 <tr>
-                  <th>Membro</th>
-                  <th>Cargo</th>
-                  <th>Status</th>
-                  <th>Meta</th>
+                  <th>Membro <Filter /></th>
+                  <th>Cargo <Filter /></th>
+                  <th>Status <Filter /></th>
+                  <th>Meta <Filter /></th>
                   <th>Ações</th>
                 </tr>
               </thead>
