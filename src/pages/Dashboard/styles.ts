@@ -138,10 +138,8 @@ export const Table = styled.div`
         color: white;
         font-size: 1.2rem;
         text-align: center;
-        span {
-          color: rgba(255, 255, 255, 0.40);
-        }
       }
+      
     > tbody tr td {
         border-radius: 6px;
         padding: .6rem .8rem;
@@ -152,39 +150,41 @@ export const Table = styled.div`
         &:last-child {
           text-align: right;
           display: flex;
-          margin-top: .5rem;
+          margin-top: .4rem;
           justify-content: flex-end;
           gap: 0.5rem;
         }
       }
 
-    > tbody tr td svg {
+    > tbody tr td button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 2rem; 
         height: 2rem;
-        padding: 0.3rem;
+        padding: .2rem;
         border-radius: 4px;
-
-        &:hover {
-          
-        }
       }
-    
-      > tbody tr td svg:first-child { /* UpArrow */
+      
+      > tbody tr td button:first-child { /* UpArrow */
           border: 1px solid #43D027;
-          background: radial-gradient(50% 50% at 50% 50%, rgba(67, 208, 39, 0.50) 0%, rgba(44, 188, 16, 0.50) 100%);
+          background: radial-gradient(50% 50% at 50% 50%, rgba(67, 208, 39, 0.50) 0%, rgba(44, 188, 16, 0.50) 100%) ;
     }
 
-    > tbody tr td svg:nth-child(2) { /* DownArrow */
+    > tbody tr td button:nth-child(2) { /* DownArrow */
         border: 1px solid #EEB600;
-        background: radial-gradient(50% 50% at 50% 50%, #EEB600 0%, #886800 100%);
+        background: radial-gradient(50% 50% at 50% 50%, #EEB600 0%, #886800 100%) ;
     }
 
-    > tbody tr td svg:last-child { /* X */
+    > tbody tr td button:last-child { /* X */
         border: 1px solid #D44;
         background: radial-gradient(50% 50% at 50% 50%, #D44 0%, #772525 100%);
     }
-      
   }
+`
+
+export const StatusIndicator = styled.span<{ status: string}>`
+  color: ${(props) => props.status === "Online" ? "#43D027" : "#D44"};
 `
 
 export const Activity = styled.div`
