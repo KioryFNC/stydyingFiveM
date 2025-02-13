@@ -140,8 +140,7 @@ export const Table = styled.div`
         text-align: center;
       }
       
-    > tbody tr td {
-        border-radius: 6px;
+      > tbody tr td {
         padding: .6rem .8rem;
 
         &:first-child {

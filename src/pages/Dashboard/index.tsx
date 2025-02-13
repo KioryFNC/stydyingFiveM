@@ -50,7 +50,7 @@ export function Dashboard() {
               <tbody>
                 {members.map((member) => (
                   <tr key={member.id}>
-                    <td>{member.name} <span>[{member.id}]</span></td>
+                    <td>{member.name} <span>[{member.id.padStart(4, "0")}]</span></td>
                     <td>{member.role}</td>
                     <td>
                       <Element.StatusIndicator status={member.status}>
