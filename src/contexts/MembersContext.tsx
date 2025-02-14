@@ -11,10 +11,14 @@ interface Member {
 
 interface MembersContextType {
   members: Member[]
-  inviteMember: (name: string, role: string, status: string, goal: number) => void
+  inviteMember: (name: string, role?: string, status?: string, goal?: number) => void
   removeMember: (id: string) => void
   promoteMember: (id: string) => void
   demoteMember: (id: string) => void
+  filterType: string
+  isAscending: boolean
+  toggleFilter: (type: string) => void
+  sortMembers: (members: Member[], filterType: string, isAscending: boolean) => Member[]
 }
 
 export const MembersContext = createContext<MembersContextType | undefined>(undefined)

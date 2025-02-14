@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { MembersContext } from "./MembersContext";
 
-const generateRandomID = () => Math.floor(Math.random() * 9999).toString()
+const generateRandomID = () => Date.now().toString(); // Evita IDs duplicados
 
 interface Member {
   id: string
@@ -19,8 +19,6 @@ const rolesHierarchy = [
   "Líder" /* 3 */
 ]
 
-
-
 export const MembersProvider = ({ children }: { children: React.ReactNode }) => {
   const [members, setMembers] = useState<Member[]>([
     { id: "1", name: "Yuri", role: "Líder", status: "Online", goal: 100 },
@@ -35,12 +33,19 @@ export const MembersProvider = ({ children }: { children: React.ReactNode }) => 
     { id: "10", name: "Michael Jackson", role: "Membro", status: "Offline", goal: 10 },
   ])
 
-  
+  const [filterType, setFilterType] = useState<string>("")
+  const [isAscending, setIsAscending] = useState<boolean>(true)
 
-  const inviteMember = (name: string, role: string, status: string, goal: number) => {
-    const newMember: Member = { id: generateRandomID(), name, role, status, goal }
-    setMembers((prev) => [...prev, newMember])
-  }
+
+  const inviteMember = (name: string, role: string = "Membro", status: string = "Offline", goal: number = 0) => {
+    setMembers((prev) => {
+      const isDuplicate = prev.some(member => member.name.toLowerCase() === name.toLowerCase());
+      if (isDuplicate) return prev;
+  
+      const newMember: Member = { id: generateRandomID(), name, role, status, goal };
+      return [...prev, newMember];
+    });
+  };
 
   const removeMember = (id: string) => {
     setMembers((prev) => prev.filter((member) => member.id !== id))
@@ -63,8 +68,8 @@ export const MembersProvider = ({ children }: { children: React.ReactNode }) => 
     setMembers((prev) =>
       prev.map((member) => {
         if (member.id === id) {
-          const curreentIndex = rolesHierarchy.indexOf(member.role)
-          const newRole = curreentIndex > 0 ? rolesHierarchy[curreentIndex - 1] : member.role
+          const currentIndex = rolesHierarchy.indexOf(member.role)
+          const newRole = currentIndex > 0 ? rolesHierarchy[currentIndex - 1] : member.role
           return { ...member, role: newRole}
         }
         return member
@@ -72,8 +77,27 @@ export const MembersProvider = ({ children }: { children: React.ReactNode }) => 
     )
   }
 
+  const toggleFilter = (type: string) => {
+    setFilterType(type)
+    setIsAscending((prev) => prev)
+  }
+
+  const sortMembers = (members: Member[], filterType: string, isAscending: boolean) => {
+    return [...members].sort((a, b) => {
+      if (filterType === "role") {
+        const indexA = rolesHierarchy.indexOf(a.role);
+        const indexB = rolesHierarchy.indexOf(b.role);
+        return isAscending ? indexA - indexB : indexB - indexA;
+      }
+      if (filterType === "goal") {
+        return isAscending ? a.goal - b.goal : b.goal - a.goal;
+      }
+      return 0;
+    });
+  };
+
   return (
-    <MembersContext.Provider value={{ members, inviteMember, removeMember, promoteMember, demoteMember }}>
+    <MembersContext.Provider value={{ members, inviteMember, removeMember, promoteMember, demoteMember, filterType, isAscending, toggleFilter, sortMembers }}>
       {children}
     </MembersContext.Provider>
   )
