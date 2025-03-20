@@ -113,5 +113,17 @@ export const Texts = styled.div`
     border: 1px solid #8237EC;
     background: radial-gradient(138.56% 100% at 0% 51.25%, #6523C2 0%, #8237EC 59.77%, #6523C2 100%);
     box-shadow: 0px 4px 23.9px 0px rgba(130, 55, 236, 0.50);
+
+  }
+  @media (max-width: 1200px) {
+    button {
+      width: 8rem;
+      height: 2rem;
+      font-size: 1.2rem;
+    }
+
+    span {
+      font-size: 1.2rem;
+    }
   }
 `

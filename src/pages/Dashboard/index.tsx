@@ -31,8 +31,8 @@ export function Dashboard() {
 
   const handleInvite = () => {
     if (search.trim() !== "") {
-      inviteMember(search, "Membro", "Online", 100); // Usa o nome digitado no campo de pesquisa
-      setSearch(""); // Limpa o input de pesquisa após adicionar
+      inviteMember(search, "Membro", "Online", 100)
+      setSearch("")
     }
   };
 
@@ -41,7 +41,7 @@ export function Dashboard() {
       member.name.toLowerCase().includes(search.toLowerCase()) || member.id.includes(search)
   )
 
-  const sortedMembers = sortMembers(filteredMembers, filterType, isAscending);
+  const sortedMembers = sortMembers(filteredMembers, filterType, isAscending)
 
 
   return (
@@ -86,7 +86,7 @@ export function Dashboard() {
                     <td>{member.name} <span>[{member.id.padStart(4, "0")}]</span></td>
                     <td>{member.role}</td>
                     <td>
-                      <Element.StatusIndicator status={member.status}>
+                      <Element.StatusIndicator $status={member.status}>
                         {member.status}
                       </Element.StatusIndicator> 
                     </td>

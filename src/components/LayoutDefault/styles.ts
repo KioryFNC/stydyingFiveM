@@ -24,6 +24,11 @@ export const Root = styled.div`
   gap: 1rem;
   border-radius: 6px;
   background: ${(props) => props.theme['background']};
+  overflow: hidden;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
 `
 
 export const Navigation = styled.div`

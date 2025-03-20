@@ -182,9 +182,9 @@ export const Table = styled.div`
   }
 `
 
-export const StatusIndicator = styled.span<{ status: string}>`
-  color: ${(props) => props.status === "Online" ? "#43D027" : "#D44"};
-`
+export const StatusIndicator = styled.span<{ $status: string }>`
+  color: ${(props) => (props.$status === "Online" ? "#43D027" : "#D44")};
+`;
 
 export const Activity = styled.div`
    flex: 1; 
